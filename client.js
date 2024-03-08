@@ -9,6 +9,7 @@ const message = process.argv[2]
 client.createTodo({id: -1, text: message},(err,resp)=> {
     if (err!=null) {
         console.error(`Received from server ${err}`)
+        return;
     }
     console.log("Received from server createTodo", resp)
 })
